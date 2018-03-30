@@ -7,6 +7,7 @@ TagManager:
   - PressurePlate
   - Box
   - Gate
+  - Plank
   layers:
   - Default
   - TransparentFX

@@ -9,9 +9,11 @@ public class PickupObjects : MonoBehaviour {
     private GameObject pickup;
     public Vector3 offset;
     public LayerMask layer;
+    public ShowTextScript showText;
 	// Use this for initialization
-	void Start () {
-		
+	void Start ()
+    {
+        showText = GameObject.FindGameObjectWithTag("Box").GetComponent<ShowTextScript>();
 	}
 	
 	// Update is called once per frame
@@ -26,6 +28,7 @@ public class PickupObjects : MonoBehaviour {
                 {
                     pickup = hit.collider.gameObject;
                     pickup.GetComponent<Rigidbody>().isKinematic = true;
+                    showText.isPickedUp = true;
                 }
             }
             else
@@ -33,6 +36,7 @@ public class PickupObjects : MonoBehaviour {
                 TranspaOff();
                 pickup.GetComponent<Rigidbody>().isKinematic = false;
                 pickup = null;
+                showText.isPickedUp = false;
             }
         }
 
