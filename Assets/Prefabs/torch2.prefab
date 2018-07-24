@@ -55,6 +55,7 @@ GameObject:
   - component: {fileID: 33216578650757736}
   - component: {fileID: 23402153135787614}
   - component: {fileID: 95348201791382292}
+  - component: {fileID: 64963998909175738}
   m_Layer: 0
   m_Name: torch2
   m_TagString: Untagged
@@ -69,7 +70,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1615171794345256}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.776, y: -0.30400002, z: 1.4440002}
+  m_LocalPosition: {x: -5.500206, y: 0.91, z: -6.752}
   m_LocalScale: {x: 0.004758915, y: 0.004758917, z: 0.004758917}
   m_Children:
   - {fileID: 4252843872186640}
@@ -144,6 +145,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1615171794345256}
   m_Mesh: {fileID: 4300002, guid: 3641b2a4b235cc341b92aa4e3f0c1fe2, type: 3}
+--- !u!64 &64963998909175738
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1615171794345256}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300002, guid: 3641b2a4b235cc341b92aa4e3f0c1fe2, type: 3}
 --- !u!95 &95348201791382292
 Animator:
   serializedVersion: 3
@@ -171,8 +186,8 @@ Light:
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 0.8745098, g: 0.09019608, b: 0.81960785, a: 1}
-  m_Intensity: 8.58
-  m_Range: 1.06
+  m_Intensity: 4
+  m_Range: 7
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:

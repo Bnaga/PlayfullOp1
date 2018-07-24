@@ -8,6 +8,7 @@ TagManager:
   - Box
   - Gate
   - Plank
+  - Box2
   layers:
   - Default
   - TransparentFX

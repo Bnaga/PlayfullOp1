@@ -19,6 +19,11 @@ public class PlateGate3 : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
+        if (other.tag == "Box2")
+        {
+            platemanager.plate2 = true;
+        }
+
         if (other.tag == "Box")
         {
             platemanager.plate2 = true;
@@ -27,6 +32,11 @@ public class PlateGate3 : MonoBehaviour {
 
     private void OnTriggerExit(Collider other)
     {
+        if (other.tag == "Box2")
+        {
+            platemanager.plate2 = false;
+        }
+
         if (other.tag == "Box")
         {
             platemanager.plate2 = false;
