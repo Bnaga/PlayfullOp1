@@ -3,21 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Startbutton : ButtonScript
-{ 
+public class MainMenu : ButtonScript {
+
+
     Material stoneMaterial;
     Material standard;
-    // Use this for initialization
     void Start()
     {
         standard = GetComponent<Renderer>().material;
         stoneMaterial = stone1.GetComponent<Renderer>().material;
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
 
     }
 
@@ -43,7 +37,7 @@ public class Startbutton : ButtonScript
             stone4.GetComponent<Renderer>().material = stonePress;
             hoverLight.SetActive(false);
             pressLight.SetActive(true);
-            StartCoroutine("NextLevel");
+            StartCoroutine("BacktoMain");
         }
     }
 
@@ -58,9 +52,11 @@ public class Startbutton : ButtonScript
         pressLight.SetActive(false);
     }
 
-    IEnumerator NextLevel()
+    IEnumerator BacktoMain()
     {
         yield return new WaitForSeconds(0);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(0);
+        Time.timeScale = 1;
+        
     }
 }

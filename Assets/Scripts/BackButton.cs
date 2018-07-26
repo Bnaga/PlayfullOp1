@@ -1,23 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class Startbutton : ButtonScript
-{ 
+public class BackButton : ButtonScript {
+
+    public PauseMenu pause;
+
     Material stoneMaterial;
     Material standard;
-    // Use this for initialization
+    
     void Start()
     {
         standard = GetComponent<Renderer>().material;
         stoneMaterial = stone1.GetComponent<Renderer>().material;
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
 
     }
 
@@ -43,7 +38,7 @@ public class Startbutton : ButtonScript
             stone4.GetComponent<Renderer>().material = stonePress;
             hoverLight.SetActive(false);
             pressLight.SetActive(true);
-            StartCoroutine("NextLevel");
+            StartCoroutine("Back");
         }
     }
 
@@ -58,9 +53,9 @@ public class Startbutton : ButtonScript
         pressLight.SetActive(false);
     }
 
-    IEnumerator NextLevel()
+    IEnumerator Back()
     {
         yield return new WaitForSeconds(0);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        pause.isPaused = false;
     }
 }
