@@ -5,9 +5,12 @@ using UnityEngine.UI;
 
 public class ShowTextScript : MonoBehaviour {
 
-    bool collided = false;
+    public bool collided = false;
+    public bool hasCollided = false;
     public bool isPickedUp = false;
-    string uiText = "Press F to pick up";
+    public bool hadCollided = false;
+    //string uiText = "Press F to pick up";
+    public ShowText text;
 	// Use this for initialization
 	void Start () {
 		
@@ -18,21 +21,12 @@ public class ShowTextScript : MonoBehaviour {
 
     }
 
-    private void OnGUI()
-    {
-        if(collided && !isPickedUp)
-        {
-            Rect rect = new Rect(140, Screen.height /2, Screen.width - 300, 120);
-            GUI.Box(rect, uiText);
-            
-        }
-    }
-
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Player")
         {
             collided = true;
+            hadCollided = false;
         }
     }
 
@@ -41,6 +35,7 @@ public class ShowTextScript : MonoBehaviour {
         if (other.tag == "Player")
         {
             collided = false;
+            hadCollided = true;
         }
     }
 }

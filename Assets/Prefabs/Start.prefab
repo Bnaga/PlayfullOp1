@@ -630,8 +630,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c9aa9cce4ab6314293eced704004b90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hover: {fileID: 0}
-  press: {fileID: 0}
+  hover: {fileID: 2100000, guid: fc25903ac5203f648bf1f27ed72fc24b, type: 2}
+  press: {fileID: 2100000, guid: 83e93cc158c2fdc42865a235f467639f, type: 2}
   stoneHover: {fileID: 2100000, guid: 4182b6f44c9069b4ca8111b3f321793f, type: 2}
   stonePress: {fileID: 2100000, guid: dddab83c0bc4d914a994d6f47e5547a8, type: 2}
   hoverLight: {fileID: 1581588548294030}

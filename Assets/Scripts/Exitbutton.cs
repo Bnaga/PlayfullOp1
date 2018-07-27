@@ -2,27 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Exitbutton : MonoBehaviour {
+public class Exitbutton : ButtonScript {
 
 
     public Material hoverExit;
     public Material pressExit;
-    public Material stoneHover;
-    public Material stonePress;
-    public GameObject hoverLight;
-    public GameObject pressLight;
-    public GameObject stone1;
-    public GameObject stone2;
-    public GameObject stone3;
-    public GameObject stone4;
     Material stoneMaterial;
     Material standard;
+
     // Use this for initialization
     void Start ()
     {
         standard = GetComponent<Renderer>().material;
         stoneMaterial = stone1.GetComponent<Renderer>().material;
-
     }
 	
 	// Update is called once per frame
@@ -69,7 +61,7 @@ public class Exitbutton : MonoBehaviour {
 
     IEnumerator ExitGame()
     {
-        yield return new WaitForSeconds(0);
+        yield return new WaitForSeconds(0f);
         Application.Quit();
     }
 }

@@ -8,12 +8,11 @@ public class BackButton : ButtonScript {
 
     Material stoneMaterial;
     Material standard;
-    
+
     void Start()
     {
         standard = GetComponent<Renderer>().material;
         stoneMaterial = stone1.GetComponent<Renderer>().material;
-
     }
 
     private void OnMouseOver()

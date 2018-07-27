@@ -630,8 +630,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8da6e20fbd128d42a85f60a9c26feec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverExit: {fileID: 2100000, guid: 29671946a02cc07438f595ec5c3d25d7, type: 2}
-  pressExit: {fileID: 2100000, guid: 2350aa3db771d5c47a15b61081c75409, type: 2}
+  hover: {fileID: 0}
+  press: {fileID: 0}
   stoneHover: {fileID: 2100000, guid: 4182b6f44c9069b4ca8111b3f321793f, type: 2}
   stonePress: {fileID: 2100000, guid: dddab83c0bc4d914a994d6f47e5547a8, type: 2}
   hoverLight: {fileID: 1814658769459132}
@@ -640,3 +640,5 @@ MonoBehaviour:
   stone2: {fileID: 1081695485218728}
   stone3: {fileID: 1499428834201042}
   stone4: {fileID: 1118769300042938}
+  hoverExit: {fileID: 2100000, guid: 29671946a02cc07438f595ec5c3d25d7, type: 2}
+  pressExit: {fileID: 2100000, guid: 2350aa3db771d5c47a15b61081c75409, type: 2}

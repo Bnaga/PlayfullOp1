@@ -12,7 +12,6 @@ public class MainMenu : ButtonScript {
     {
         standard = GetComponent<Renderer>().material;
         stoneMaterial = stone1.GetComponent<Renderer>().material;
-
     }
 
     private void OnMouseOver()
@@ -54,7 +53,7 @@ public class MainMenu : ButtonScript {
 
     IEnumerator BacktoMain()
     {
-        yield return new WaitForSeconds(0);
+        yield return new WaitForSeconds(0f);
         SceneManager.LoadScene(0);
         Time.timeScale = 1;
         
